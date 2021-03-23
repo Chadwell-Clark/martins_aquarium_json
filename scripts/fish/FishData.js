@@ -213,6 +213,7 @@ const fishCollection = [
     }
 ];
 
+//   ***  Pre json refactor  ***   //
 export const useFish = () => {
     return fishCollection.slice;
 }
@@ -268,5 +269,78 @@ export const getUnworthy = () => {
     return unworthyArray
 }
 
+//   ***  Post JSON refactor  ***   //
+
+// export const useFish = () => {
+//   return fishCollection.slice;
+// };
+
+// export const getFish = () => fishCollection;
+
+// let allFish = [];
+
+// const useAllFish = () => {
+//   return [...allFish];
+// };
 
 
+// export const getMostHolyFish = () => {
+//     // 3, 6, 9, 12, etc... fish
+//     const holyFishArray = [];
+//     fetchFish()
+//     .then(parsed => {
+//         console.log("holy Parsed", parsed)
+//     let fishes = parsed;
+//     for (const fish of fishes) {
+//         if (fish.inches % 3 === 0) {
+//             holyFishArray.push(fish);
+//         }
+//     }
+// })
+// console.log("holyfish", holyFishArray)
+//     return holyFishArray;
+// };
+
+// export const getSoldierFish = () => {
+//     const soldiersArray = [];
+//     fetchFish()
+//     .then(parsed => {
+//         console.log("soldier Parsed", parsed)
+//     let fishes = parsed;
+//     for (const fish of fishes) {
+//         if (fish.inches % 5 === 0 && fish.inches % 3 !== 0) {
+//             soldiersArray.push(fish);
+//         }
+//     }
+// })
+//     console.log("soldierArray", soldiersArray);
+//     return soldiersArray;
+// };
+
+// export const getUnworthy = () => {
+//     const unworthyArray = [];
+//     fetchFish()
+//     .then(parsed => {
+//         console.log("unworthy Parsed", parsed)
+//     let fishes = parsed;
+//     for (const fish of fishes) {
+//         if (fish.inches % 5 !== 0 && fish.inches % 3 !== 0) {
+//             unworthyArray.push(fish);
+//         }
+//     }
+// })
+//     console.log("unworthy", unworthyArray)
+//     return unworthyArray;
+// };
+
+
+// const fetchFish = () => {
+//   return fetch("http://localhost:8088/fishCollection")
+//     .then((response) => response.json())
+//     .then((parsedResponse) => {
+//       allFish = parsedResponse;
+//       console.log("allFish", allFish);
+//       return parsedResponse;
+//     });
+// };
+// fetchFish();
