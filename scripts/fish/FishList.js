@@ -1,5 +1,5 @@
 import { Fish } from "./Fish.js";
-import { getMostHolyFish, getSoldierFish, getUnworthy } from "./FishData.js";
+import { getMostHolyFish, getSoldierFish, getUnworthy, useUnworthy } from "./FishData.js";
 
 // export const FishList = () => {
 
@@ -27,12 +27,19 @@ import { getMostHolyFish, getSoldierFish, getUnworthy } from "./FishData.js";
         
 // };
 export const FishList = () => {
+    getUnworthy()
+    .then(()=> {
+        useUnworthy();
+        // console.log(test)
+    })
     addFishToDOM(getMostHolyFish(),"Holy Fish");
     addFishToDOM(getSoldierFish(), "Soldier Fish");
     addFishToDOM(getUnworthy(), "Unworthy Fish");
+    console.log(unfish)
 }
 
 const addFishToDOM =(fishArray, heading) => {
+    console.log(fishArray)
 const DOMLocation = document.querySelector("#fishList");
 // console.log('fishlist reference', DOMLocation);
 
@@ -41,6 +48,7 @@ let fishHTMLRepresentations = "";
 
 //4. Loop over the array of fish and for each one, invoke the Fish component which returns HTML representation
 for (const onefish of fishArray) {
+    console.log(onefish)
     fishHTMLRepresentations += Fish(onefish);
 }
 
