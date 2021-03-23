@@ -1,5 +1,5 @@
 import { Fish } from "./Fish.js";
-import { getFish, getMostHolyFish, getSoldierFish, getUnworthy } from "./FishData.js";
+import { getMostHolyFish, getSoldierFish, getUnworthy } from "./FishData.js";
 
 // export const FishList = () => {
 
